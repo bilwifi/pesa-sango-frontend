@@ -7,7 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Inscription from "./views/Inscription";
 
-import Signalement from './views/Signalement'
+import Signalement from "./views/Signalement";
+
+import Affichage from "./views/Affichage";
 
 function App() {
   return (
@@ -25,10 +27,14 @@ function App() {
           </Route>
           <Route path="/listes-plaintes">
             {/** le composant de la page listes de plaintes */}
-            <Signalement/>
+            <Signalement />
           </Route>
           <Route path="/inscription">
-            <Inscription/>
+            <Inscription />
+            <Affichage />
+          </Route>
+          <Route path="/affichage">
+            <Affichage />
           </Route>
         </Switch>
       </div>
