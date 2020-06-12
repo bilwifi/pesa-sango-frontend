@@ -12,14 +12,14 @@ const Inscription = () => {
         <Container>
             <Header/>
             
-             <p id="para">Inscription</p>
+             <h1>Inscription</h1>
             
             <Form>
-                <Input label='Nom utilisateur' placeholder='votre nom' type='text'/>
-                <Input label='Télephone' placeholder='Télephone' type='number'/>
-                <Input label='Email' placeholder='Email' type='Email'/>
-                <Input label='Mot de passe' placeholder='Mot de passe' type='text'/>
-                <Input label='Confirmer mot de passe' placeholder='Confirmer le mot de passe' type='text'/>
+                <Input  placeholder='votre nom' type='text'/>
+                <Input  placeholder='Télephone' type='number'/>
+                <Input  placeholder='Email' type='Email'/>
+                <Input  placeholder='Mot de passe' type='text'/>
+                <Input  placeholder='Confirmer le mot de passe' type='text'/>
                 <Checkbox radio label="j'ai lu et j'accepte les conditions d'utilisation et la politique de confidentialité de PESA SANGO" />
             </Form><br/><br/>
             <div>
