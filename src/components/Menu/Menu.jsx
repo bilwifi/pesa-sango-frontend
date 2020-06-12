@@ -70,13 +70,22 @@ function Menu({ open }) {
     <MenuStyle open={open}>
       <Nav className="text-right" vertical>
         <NavItem>
-          <NavLink href="#">Link</NavLink>
+          <NavLink href=".">Acueil</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Link</NavLink>
+          <NavLink href="/formulaire">Signaler</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="#">Another Link</NavLink>
+          <NavLink href="/recherche">Recherche</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/listes-plaintes">Liste plaintes</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/carthographie">Carthographie</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/connexion">Connexion</NavLink>
         </NavItem>
       </Nav>
     </MenuStyle>
