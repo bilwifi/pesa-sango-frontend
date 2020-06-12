@@ -1,12 +1,14 @@
 import React from 'react'
-import { Form, Container,Checkbox,Grid,Segment } from 'semantic-ui-react'
+import { Form, Container,Checkbox,Grid,Segment,Icon } from 'semantic-ui-react'
 import Input from "../components/Input"
+import '../views/css/Inscription.css'
 
 
 
 const Inscription = () => {
     return (
         <Container>
+
             <p>Inscription</p>
             <Form>
             <Input label='nom utilisateur' placeholder='votre nom' type='text'/>
@@ -31,7 +33,7 @@ const Inscription = () => {
 
                 <Grid.Row>
                     <Grid.Column>
-                        <Segment>3</Segment>
+                        <Segment> <Icon name='facebook' /> Facebook</Segment>
                     </Grid.Column>
                     <Grid.Column>
                         <Segment>4</Segment>
