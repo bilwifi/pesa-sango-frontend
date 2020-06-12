@@ -1,9 +1,29 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Connexion from "./views/Connexion"
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/formulaire">
+            {/** le composant de la page signaler un bleme */}
+          </Route>
+          <Route path="/connexion" component={Connexion} />
+          <Route path="/listes-plaintes">
+            {/** le composant de la page listes de plaintes */}
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
