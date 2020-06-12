@@ -3,7 +3,7 @@ import React from "react";
 import { Jumbotron as Jumbo, Container } from "reactstrap";
 import styled from "styled-components";
 
-import image from "../images/homepage.jpeg";
+import image from "../images/homepage.jpg";
 
 import Header from "./Header";
 import Button from "./Button";
