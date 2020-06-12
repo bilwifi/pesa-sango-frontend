@@ -1,3 +1,42 @@
 p{
     text-align: center;
+    font-size: larger;
+
 }
+#para{
+    text-align: left;
+}
+#icon1{
+    background-color:  #395185;
+    border:2px solid #282272;
+}
+
+#icon2{
+    background-color: #FFFFFF;
+    border:2px solid #282272;
+}
+
+
+ #lien1{
+    text-decoration: none;
+    text-decoration-color: #FFFFFF;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+#lien2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+}
+#fb{
+    color:white;
+}
+#name{
+    color:white;
+} 
