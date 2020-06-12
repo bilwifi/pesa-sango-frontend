@@ -5,6 +5,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
+import Inscription from "./views/Inscription";
 
 import Signalement from './views/Signalement'
 
@@ -25,6 +26,9 @@ function App() {
           <Route path="/listes-plaintes">
             {/** le composant de la page listes de plaintes */}
             <Signalement/>
+          </Route>
+          <Route path="/inscription">
+            <Inscription/>
           </Route>
         </Switch>
       </div>
