@@ -6,6 +6,11 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Listes from "./views/Listes";
+import Inscription from "./views/Inscription";
+
+import Signalement from "./views/Signalement";
+
+import Affichage from "./views/Affichage";
 
 function App() {
   return (
@@ -18,9 +23,20 @@ function App() {
           <Route path="/formulaire">
             {/** le composant de la page signaler un bleme */}
           </Route>
+          <Route path="/recherche">
+            {/** le composant de la page signaler un bleme */}
+          </Route>
           <Route path="/listes-plaintes">
             {/** le composant de la page listes de plaintes */}
             <Listes />
+            <Signalement />
+          </Route>
+          <Route path="/inscription">
+            <Inscription />
+            <Affichage />
+          </Route>
+          <Route path="/affichage">
+            <Affichage />
           </Route>
         </Switch>
       </div>

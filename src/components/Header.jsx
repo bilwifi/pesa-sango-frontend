@@ -6,6 +6,7 @@ import { Row, Col } from "reactstrap";
 import Burger from "./Burger/Burger";
 import Menu from "./Menu/Menu";
 
+import logo from "../images/logo.png";
 const HeaderStyle = styled.header`
   width: 100%;
   background-color: white;
@@ -20,7 +21,7 @@ function Header() {
         <Row>
           <Col>
             <div>
-              <h5>LOGO</h5>
+              <img src={logo} alt="" width={35}/>
             </div>
           </Col>
           <Col>
