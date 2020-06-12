@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 
 import AffichageStyle from "./AffochageStyle";
 import Categorie from '../components/Categorie';
+import Button from "../components/Button";
 
 
 const categories = [
@@ -70,7 +71,7 @@ const Affichage = () => {
           <div className="lienSignalements">
             <a href="Signalements">Voir tous les signalements</a>
           </div>
-          <button onClick={handleFormSubmit}>Valider</button>
+          <Button onClick={handleFormSubmit} namebutton="Valider" backgroundbutton="red" color="white" />
         </main>
       </AffichageStyle>
     );
