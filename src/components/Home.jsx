@@ -51,17 +51,17 @@ function Home() {
               Notre but et de faire entendre vos voix
             </h2>
             <Button
-              className="button"
               namebutton="signaler un probleme"
               backgroundbutton="#c80000"
               color="white"
+              lien="/formulaire"
             />{" "}
             <br />
             <Button
-              className="button"
               namebutton="voire les signalements"
               backgroundbutton="white"
               color="#c80000"
+              lien="/listes-plaintes"
             />
           </div>
         </Container>

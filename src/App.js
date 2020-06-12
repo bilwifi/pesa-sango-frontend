@@ -5,6 +5,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
+import Listes from "./views/Listes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </Route>
           <Route path="/listes-plaintes">
             {/** le composant de la page listes de plaintes */}
+            <Listes />
           </Route>
         </Switch>
       </div>
