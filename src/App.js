@@ -31,7 +31,6 @@ function App() {
           </Route>
           <Route path="/inscription">
             <Inscription />
-            <Affichage />
           </Route>
           <Route path="/affichage">
             <Affichage />

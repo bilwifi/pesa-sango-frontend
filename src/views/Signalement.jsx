@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header'
-import imag from '../images/homepage.jpeg'
+import imag from '../images/homepage.jpg'
 
 import styled from "styled-components";
 import Card from '../components/card';

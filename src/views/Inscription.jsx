@@ -33,10 +33,10 @@ const Inscription = () => {
                  <Grid columns='equal'>
                  <Grid.Row>
                     <Grid.Column>
-                        <Segment id='icon1'> <a  id="lien1" href="">< Icon id="fb" name='facebook f' /> Facebook</a></Segment>
+                        <Segment id='icon1'> <a  id="lien1" href="k">< Icon id="fb" name='facebook f' /> Facebook</a></Segment>
                     </Grid.Column>
                     <Grid.Column>
-                        <Segment id='icon2'><a id="lien2"href="">< Icon name='twitter' color='twitter'/> twitter</a></Segment>
+                        <Segment id='icon2'><a id="lien2"href="l">< Icon name='twitter' color='twitter'/> twitter</a></Segment>
                     </Grid.Column>
                 </Grid.Row>
                  </Grid>

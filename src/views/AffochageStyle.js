@@ -20,7 +20,6 @@ const AffichageStyle = styled.div`
     background-color: white;
   }
   .lienSignalements {
-    color: blueviolet;
     margin-left: 100px;
     margin-top: 20px;
 

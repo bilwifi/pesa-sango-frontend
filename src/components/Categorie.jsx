@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styled from 'styled-components';
 import { FaCheckCircle } from "react-icons/fa";
@@ -23,14 +23,13 @@ const Madiv = styled.div`
 `;
 
 const Categorie = (props) => {
-    const [active, setActive] = useState(false);
 
     return (
       <Madiv>
         <div
-          className={active ? "red" : "white"}
+          className={props.isActive ? "red" : "white"}
           id="categorie"
-          onClick={() => setActive(!active)}
+          onClick={() => props.refreshListeCategorie(props.nom)}
         >
           <FaCheckCircle style={{ color: "white", float: "right" }} />
           <h2>{props.nom}</h2>
