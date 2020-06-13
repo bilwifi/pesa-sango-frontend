@@ -12,8 +12,9 @@ const HomeStyle = styled.div`
   .jumbotron {
     background: url(${image}) no-repeat fixed bottom;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    margin-bottom : -10px;
     // z-index: -2;
   }
 
@@ -47,14 +48,14 @@ function Home() {
               </h2>
               <div>
                 <Button
-                  namebutton="Signaler un probleme"
-                  backgroundbutton="#c80000"
+                  namebutton="Signaler un problème"
+                  backgroundbutton="#d91438"
                   color="white"
                   lien="/plaintes"
                 />{" "}
                 <br />
                 <Button
-                  namebutton="Voire les signalements"
+                  namebutton="Voir les signalements"
                   backgroundbutton="white"
                   color="#c80000"
                   lien="/listes-plaintes"
