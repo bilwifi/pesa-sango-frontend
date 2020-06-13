@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
-import AffichageStyle from "./AffochageStyle";
-import Categorie from '../components/Categorie';
+import Wrapper from "../components/Wrapper";
+import { AffichageStyle, Container } from "./AffochageStyle";
+import Categorie from "../components/Categorie";
 import Button from "../components/Button";
-
 
 const categories = [
   {
@@ -35,29 +35,25 @@ const categories = [
     nom: "Fonction Publique",
   },
   {
-    id:8,
+    id: 8,
     nom: "Environnement",
-  }
+  },
 ];
 
-
 const Affichage = () => {
-    const [listeCategorie, setListeCategorie] = useState([]);
+  const [listeCategorie, setListeCategorie] = useState([]);
 
-    const refreshListeCategorie=(nom)=>{
-        let liste =listeCategorie;
-        if (listeCategorie.includes(nom)) {
-            liste.push(nom);
-        } else{
-            liste.splice(nom);
-        }
-        setListeCategorie(listeCategorie);
+  const refreshListeCategorie = (nom) => {
+    let liste = listeCategorie;
+    if (listeCategorie.includes(nom)) {
+      liste.push(nom);
+    } else {
+      liste.splice(nom);
     }
-
-    const handleFormSubmit = ()=>{
-        // les routes
-    }
-    return (
+    setListeCategorie(listeCategorie);
+  };
+  return (
+    <Wrapper>
       <AffichageStyle>
         <main>
           <div className="titre">
@@ -71,10 +67,18 @@ const Affichage = () => {
           <div className="lienSignalements">
             <a href="Signalements">Voir tous les signalements</a>
           </div>
-          <Button onClick={handleFormSubmit} namebutton="Valider" backgroundbutton="red" color="white" />
+          <Container>
+            <Button
+              onClick={refreshListeCategorie}
+              namebutton="Valider"
+              backgroundbutton="red"
+              color="white"
+            />
+          </Container>
         </main>
       </AffichageStyle>
-    );
-}
+    </Wrapper>
+  );
+};
 
-export default Affichage
+export default Affichage;

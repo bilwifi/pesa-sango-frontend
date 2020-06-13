@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const media = {
@@ -9,31 +8,32 @@ const media = {
   phonebg: "@media(min-width: 425px)",
 };
 
-const ButtonStyle = styled.div`
-  button {
-    ${media.phone} {
-      width: 100%;
-      margin: 0 auto;
-      height: 50px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-    }
+const ButtonStyle = styled.button`
+  ${media.phone} {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
   }
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  color: white;
 `;
 
 function Button({ namebutton, backgroundbutton, color, lien }) {
   return (
     <div>
-      <ButtonStyle>
-        <Link to={lien}>
-          <button
-            style={{ background: `${backgroundbutton}`, color: `${color}` }}
-          >
-            {namebutton}
-          </button>
-        </Link>
-      </ButtonStyle>
+      <Link href={lien}>
+        <ButtonStyle
+          style={{ background: `${backgroundbutton}`, color: `${color}` }}
+        >
+          {namebutton}
+        </ButtonStyle>
+      </Link>
     </div>
   );
 }

@@ -5,10 +5,10 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import Listes from "./views/Listes";
-import Inscription from "./views/Inscription";
 
-import Signalement from "./views/Signalement";
+import Listes from "./views/Listes";
+import Card from "./components/Card";
+import Inscription from "./views/Inscription";
 
 import Affichage from "./views/Affichage";
 
@@ -21,19 +21,18 @@ function App() {
             <Home />
           </Route>
           <Route path="/formulaire">
-            {/** le composant de la page signaler un bleme */}
+            <Listes />
           </Route>
           <Route path="/recherche">
-            {/** le composant de la page signaler un bleme */}
-          </Route>
-          <Route path="/listes-plaintes">
-            {/** le composant de la page listes de plaintes */}
             <Listes />
-            <Signalement />
           </Route>
+          <Route exact path="/listes-plaintes">
+            <Listes />
+          </Route>
+          <Route path="/listes-plaintes/:id" component={Card} />
+
           <Route path="/inscription">
             <Inscription />
-            <Affichage />
           </Route>
           <Route path="/affichage">
             <Affichage />
