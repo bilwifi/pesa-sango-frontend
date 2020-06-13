@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link, NavLink} from 'react-router-dom';
 import Wrapper from "../components/Wrapper";
 import { Container } from "semantic-ui-react";
 import { AffichageStyle} from "./AffochageStyle";
@@ -57,14 +57,14 @@ const Affichage = () => {
     }
 
 
-    const handleFormSubmit = ()=>{
-        // les routes
-    }
+    // const handleFormSubmit = ()=>{
+    //     // les routes
+    // }
     setListeCategorie(listeCategorie);
     return (
       <Wrapper>
-        <Container>
           <AffichageStyle>
+              <main>
               <Header />
               <div className="titre">
                 <h2>Afficher par catégories</h2>
@@ -80,19 +80,21 @@ const Affichage = () => {
                 ))}
               </div>
               <div className="lienSignalements">
-                <a href="listes-plaintes">Voir tous les signalements</a>
+                 <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
               </div>
+               <Container>
               <Button
-                onClick={handleFormSubmit}
-                namebutton="Valider"
-                backgroundbutton="red"
-                color="white"
-              />
-          </AffichageStyle>
-        </Container>
-      </Wrapper>
+              onClick={refreshListeCategorie}
+              lien="/listes-plaintes"
+              namebutton="Valider"
+              backgroundbutton="red"
+              color="white"
+            />
+         </Container>
+        </main>
+      </AffichageStyle>
+    </Wrapper>
     );
   };
-  
 
 export default Affichage;

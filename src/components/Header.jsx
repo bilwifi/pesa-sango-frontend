@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link, NavLink as Url} from 'react-router-dom';
 import styled from "styled-components";
 import {
   Collapse,
@@ -25,13 +25,6 @@ const HeaderStyle = styled.header`
     display: flex;
     justify-content: flex-end;
   }
-  .nav-link{
-    font-family: Comfortaa;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 16px;
-  }
   .collapse,
   .navbar-toggle {
     &:focus {
@@ -53,26 +46,26 @@ function Header() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto text-center" navbar>
-            <NavItem>
-              <NavLink href="/">Acceuil</NavLink>
+          <NavItem>
+               <Url to="/"><NavLink>Acceuil</NavLink></Url> 
             </NavItem>
             <NavItem>
-              <NavLink href="/plaintes">Signaler</NavLink>
+               <Url to="/plaintes"><NavLink>Signaler</NavLink></Url> 
             </NavItem>
             <NavItem>
-              <NavLink href="/recherche">Recherche</NavLink>
+              <Url to="/recherche"><NavLink>Recherche</NavLink></Url> 
             </NavItem>
             <NavItem>
-              <NavLink href="/listes-plaintes">Liste plaintes</NavLink>
+              <Url to="/listes-plaintes"><NavLink>Liste plaintes</NavLink></Url> 
             </NavItem>
             {/* <NavItem>
-              <NavLink href="/carthographie">Carthographie</NavLink>
+              <Url to="/formulaire"><NavLink href="/carthographie">Carthographie</NavLink></Url> 
             </NavItem> */}
             <NavItem>
-              <NavLink href="/login">Connexion</NavLink>
+              <Url to="/login"><NavLink>Connexion</NavLink></Url> 
             </NavItem>
             <NavItem>
-              <NavLink href="/signup">S'inscrire</NavLink>
+              <Url to="/signup"><NavLink>S'inscrire</NavLink></Url> 
             </NavItem>
           </Nav>
         </Collapse>
