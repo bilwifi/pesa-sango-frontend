@@ -1,9 +1,11 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
-import AffichageStyle from "./AffochageStyle";
-import Categorie from '../components/Categorie';
+import Wrapper from "../components/Wrapper";
+import { Container } from "semantic-ui-react";
+import { AffichageStyle} from "./AffochageStyle";
+import Categorie from "../components/Categorie";
 import Button from "../components/Button";
-
+import Header from "../components/Header";
 
 const categories = [
   {
@@ -35,11 +37,10 @@ const categories = [
     nom: "Fonction Publique",
   },
   {
-    id:8,
+    id: 8,
     nom: "Environnement",
-  }
+  },
 ];
-
 
 const Affichage = () => {
     const [listeCategorie, setListeCategorie] = useState([]);
@@ -59,33 +60,39 @@ const Affichage = () => {
     const handleFormSubmit = ()=>{
         // les routes
     }
+    setListeCategorie(listeCategorie);
     return (
-      <AffichageStyle>
-        <main>
-          <div className="titre">
-            <h2>Afficher par catégories</h2>
-          </div>
-          <div className="categories">
-            {categories.map((categorie) => (
-              <Categorie key={categorie.id}
-                nom={categorie.nom}
-                refreshListeCategorie={refreshListeCategorie}
-                isActive={listeCategorie.includes(categorie.nom)}
+      <Wrapper>
+        <Container>
+          <AffichageStyle>
+              <Header />
+              <div className="titre">
+                <h2>Afficher par catégories</h2>
+              </div>
+              <div className="categories">
+                {categories.map((categorie) => (
+                  <Categorie
+                    key={categorie.id}
+                    nom={categorie.nom}
+                    refreshListeCategorie={refreshListeCategorie}
+                    isActive={listeCategorie.includes(categorie.nom)}
+                  />
+                ))}
+              </div>
+              <div className="lienSignalements">
+                <a href="listes-plaintes">Voir tous les signalements</a>
+              </div>
+              <Button
+                onClick={handleFormSubmit}
+                namebutton="Valider"
+                backgroundbutton="red"
+                color="white"
               />
-            ))}
-          </div>
-          <div className="lienSignalements">
-            <a href="Signalements">Voir tous les signalements</a>
-          </div>
-          <Button
-            onClick={handleFormSubmit}
-            namebutton="Valider"
-            backgroundbutton="red"
-            color="white"
-          />
-        </main>
-      </AffichageStyle>
+          </AffichageStyle>
+        </Container>
+      </Wrapper>
     );
-}
+  };
+  
 
-export default Affichage
+export default Affichage;

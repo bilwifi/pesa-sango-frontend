@@ -20,8 +20,9 @@ const Signaler = () => {
    return (
         <>
             <Header />
+            <br/> <br/> <br/>
             <Container>
-                <h1>Signaler un problème</h1>
+                <h2>Signaler un problème</h2>
                 <Form>
                     <Form.Field control='select'>
                         <option value='male'>Selectionnez la catégorie</option>

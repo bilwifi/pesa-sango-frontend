@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-const AffichageStyle = styled.div`
-  main {
-    background-color: #ffffff;
-    padding-top: 10px;
-  }
+export const AffichageStyle = styled.div`
   .categories {
     display: flex;
     flex-wrap: wrap;
@@ -33,4 +29,6 @@ const AffichageStyle = styled.div`
   }
 `;
 
-export default AffichageStyle;
+export const Container = styled.div`
+  padding: 20px;
+`;
