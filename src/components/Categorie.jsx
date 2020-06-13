@@ -8,7 +8,6 @@ const Madiv = styled.div`
   #categorie {
     flex: 1;
     height: 116px;
-
     padding: 15px;
     border-radius: 10px;
     margin: 5px;
@@ -18,6 +17,7 @@ const Madiv = styled.div`
     h2 {
       color: #77787b;
       font-size: 14px;
+      margin:25px;
     }
   }
 `;
