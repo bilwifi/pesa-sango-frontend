@@ -43,18 +43,18 @@ function Home() {
           <Container>
             <div className="main">
               <h2 className="text-center slogan">
-                Notre but et de faire entendre votre voix
+                Notre but est de faire entendre votre voix
               </h2>
               <div>
                 <Button
-                  namebutton="signaler un probleme"
+                  namebutton="Signaler un probleme"
                   backgroundbutton="#c80000"
                   color="white"
                   lien="/plaintes"
                 />{" "}
                 <br />
                 <Button
-                  namebutton="voire les signalements"
+                  namebutton="Voire les signalements"
                   backgroundbutton="white"
                   color="#c80000"
                   lien="/listes-plaintes"

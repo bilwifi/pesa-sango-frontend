@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { FaEye, FaHeart, FaShareSquare, FaArrowLeft } from "react-icons/fa";
 import data from "./data";
@@ -38,7 +39,7 @@ function Card({ match }) {
         <h2>
           <span>
             <i>
-              <a href="/listes-plaintes">
+              <Link to="/listes-plaintes">
                 <FaArrowLeft
                   style={{
                     fontSize: "1.5rem",
@@ -47,7 +48,7 @@ function Card({ match }) {
                     top: "-4px",
                   }}
                 />
-              </a>
+              </Link>
             </i>
           </span>{" "}
           Details
