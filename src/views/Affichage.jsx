@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link, NavLink} from 'react-router-dom';
+import {NavLink } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
-import { Container } from "semantic-ui-react";
-import { AffichageStyle} from "./AffochageStyle";
+import { AffichageStyle, Container } from "./AffochageStyle";
 import Categorie from "../components/Categorie";
 import Button from "../components/Button";
-import Header from "../components/Header";
 
 const categories = [
   {
@@ -43,58 +41,57 @@ const categories = [
 ];
 
 const Affichage = () => {
-    const [listeCategorie, setListeCategorie] = useState([]);
+     const [listeCategorie, setListeCategorie] = useState([]);
 
-    const refreshListeCategorie=(nom)=>{
-        let liste =[...listeCategorie];
+    const refreshListeCategorie = (nom) => {
+        let liste = [...listeCategorie];
         if (!listeCategorie.includes(nom)) {
             liste.push(nom);
-        } else{
+        } else {
             liste = listeCategorie.filter((item) => item !== nom);
         }
         setListeCategorie(liste);
-        console.log(liste)
+        console.log(liste);
+    };
+
+    const handleFormSubmit = ()=>{
+        // les routes
     }
 
+  return (
+    <Wrapper>
+      <AffichageStyle>
+        <main>
+          <div className="titre">
+            <h2>Afficher par catégories</h2>
+          </div>
+          <div className="categories">
+            {categories.map((categorie) => (
+              <Categorie
+                key={categorie.id}
+                nom={categorie.nom}
+                refreshListeCategorie={refreshListeCategorie}
+                isActive={listeCategorie.includes(categorie.nom)}
+              />
+            ))}
+          </div>
 
-    // const handleFormSubmit = ()=>{
-    //     // les routes
-    // }
-    setListeCategorie(listeCategorie);
-    return (
-      <Wrapper>
-          <AffichageStyle>
-              <main>
-              <Header />
-              <div className="titre">
-                <h2>Afficher par catégories</h2>
-              </div>
-              <div className="categories">
-                {categories.map((categorie) => (
-                  <Categorie
-                    key={categorie.id}
-                    nom={categorie.nom}
-                    refreshListeCategorie={refreshListeCategorie}
-                    isActive={listeCategorie.includes(categorie.nom)}
-                  />
-                ))}
-              </div>
-              <div className="lienSignalements">
-                 <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
-              </div>
-               <Container>
-              <Button
-              onClick={refreshListeCategorie}
+          <div className="lienSignalements">
+            <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
+          </div>
+          <Container>
+            <Button
+              onClick={handleFormSubmit}
               lien="/listes-plaintes"
               namebutton="Valider"
               backgroundbutton="red"
               color="white"
             />
-         </Container>
+          </Container>
         </main>
       </AffichageStyle>
     </Wrapper>
-    );
-  };
+  );
+};
 
 export default Affichage;
