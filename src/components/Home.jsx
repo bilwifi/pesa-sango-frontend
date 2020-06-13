@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link, NavLink} from 'react-router-dom';
 import Wrapper from "./Wrapper";
 import { Jumbotron as Jumbo, Container } from "reactstrap";
 import styled from "styled-components";
@@ -14,7 +14,7 @@ const HomeStyle = styled.div`
     background-size: cover;
     height: 90vh;
     position: relative;
-    z-index: -2;
+    // z-index: -2;
   }
 
   .main {

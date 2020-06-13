@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link, NavLink} from 'react-router-dom';
 import styled from "styled-components";
 
 const media = {
@@ -17,22 +17,22 @@ const ButtonStyle = styled.button`
     border: none;
     cursor: pointer;
     font-family: Comfortaa;
-font-style: normal;
-font-weight: bold;
-font-size: 13px;
-line-height: 14px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 14px;
   }
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: white;
-`;
+// const Link = styled.a`
+//   text-decoration: none;
+//   color: white;
+// `;
 
 function Button({ namebutton, backgroundbutton, color, lien }) {
   return (
     <div>
-      <Link href={lien}>
+      <Link to={lien}>
         <ButtonStyle
           style={{ background: `${backgroundbutton}`, color: `${color}` }}
         >

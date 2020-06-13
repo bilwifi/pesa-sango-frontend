@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link, NavLink} from 'react-router-dom';
 import Wrapper from "../components/Wrapper";
 import { AffichageStyle, Container } from "./AffochageStyle";
 import Categorie from "../components/Categorie";
@@ -65,11 +65,12 @@ const Affichage = () => {
             ))}
           </div>
           <div className="lienSignalements">
-            <a href="listes-plaintes">Voir tous les signalements</a>
+            <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
           </div>
           <Container>
             <Button
-              onClick={refreshListeCategorie}
+              // onClick={refreshListeCategorie}
+              lien="/listes-plaintes"
               namebutton="Valider"
               backgroundbutton="red"
               color="white"
