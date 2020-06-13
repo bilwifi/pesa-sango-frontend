@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link, NavLink} from 'react-router-dom';
 import {
   Form,
   Container,
@@ -71,7 +71,9 @@ const Inscription = () => {
         <br />
         <br /> */}
         <div className="text-center">
-          <a href="/login">Vous avez déja un compte?</a>
+          <Link to="/login">
+              Vous avez déjà un compte ?
+          </Link>
         </div>
       </Container>
     </Wrapper>

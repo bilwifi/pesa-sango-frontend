@@ -55,7 +55,7 @@ const Affichage = () => {
     };
 
     const handleFormSubmit = ()=>{
-        // les routes
+        // ONCLIC/ ELEMENTS SELECT [ ] TO LISTE DE SIGNALEMENT comme (paramètre) POUR AFFICHAGE
     }
 
   return (
@@ -77,14 +77,16 @@ const Affichage = () => {
           </div>
 
           <div className="lienSignalements">
-            <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
+            <NavLink id="lien" to="/listes-plaintes">
+              <h4>Voir tous les signalements</h4>
+            </NavLink>
           </div>
           <Container>
             <Button
               onClick={handleFormSubmit}
               lien="/listes-plaintes"
               namebutton="Valider"
-              backgroundbutton="red"
+              backgroundbutton="#d91438"
               color="white"
             />
           </Container>

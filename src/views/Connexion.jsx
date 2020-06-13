@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink} from 'react-router-dom';
 import { Form, Container } from 'semantic-ui-react'
 import Header from "../components/Header"
 import Input from "../components/Input"
@@ -28,10 +29,11 @@ const Connexion = () => {
                         <Input  placeholder="Mot de Passe" type="password" />
                         <Button backgroundbutton="red" color ="white"   namebutton="Se connecter" />
                     </Form>
-                    <LinkStyle>
-                        <a href="/signup">S'inscrire</a> 
-                    </LinkStyle>
-
+                    <Link to="/signup">
+                        <LinkStyle>
+                            S'inscrire
+                        </LinkStyle>
+                    </Link>
                 </Container>
             </DivStyle>
         </>

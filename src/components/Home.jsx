@@ -12,8 +12,9 @@ const HomeStyle = styled.div`
   .jumbotron {
     background: url(${image}) no-repeat fixed bottom;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    margin-bottom : -10px;
     // z-index: -2;
   }
 
@@ -43,18 +44,18 @@ function Home() {
           <Container>
             <div className="main">
               <h2 className="text-center slogan">
-                Notre but et de faire entendre votre voix
+                Notre but est de faire entendre votre voix
               </h2>
               <div>
                 <Button
-                  namebutton="signaler un probleme"
-                  backgroundbutton="#c80000"
+                  namebutton="Signaler un problème"
+                  backgroundbutton="#d91438"
                   color="white"
                   lien="/plaintes"
                 />{" "}
                 <br />
                 <Button
-                  namebutton="voire les signalements"
+                  namebutton="Voir les signalements"
                   backgroundbutton="white"
                   color="#c80000"
                   lien="/listes-plaintes"

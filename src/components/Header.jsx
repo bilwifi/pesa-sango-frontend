@@ -40,9 +40,11 @@ function Header() {
   return (
     <HeaderStyle>
       <Navbar color="white" light expand="sm" fixed="top">
-        <NavbarBrand href="/">
-          <img src={logo} alt="logo" />
-        </NavbarBrand>
+        <Url to="/">
+          <NavbarBrand>
+            <img src={logo} alt="logo" />
+          </NavbarBrand>
+        </Url> 
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto text-center" navbar>
