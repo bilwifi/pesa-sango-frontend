@@ -1,38 +1,70 @@
 import React, { useState } from "react";
 
 import styled from "styled-components";
-import { Row, Col } from "reactstrap";
-
-import Burger from "./Burger/Burger";
-import Menu from "./Menu/Menu";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap";
 
 import logo from "../images/logo.png";
 const HeaderStyle = styled.header`
   width: 100%;
-  background-color: white;
-  padding: 20px;
+
+  img {
+    width: 50px;
+  }
+  .nav-bar {
+    box-shadow: 5px 10px 10px 5px #ccc;
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .collapse,
+  .navbar-toggle {
+    &:focus {
+      outline: none;
+    }
+  }
 `;
 
 function Header() {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
   return (
-    <div>
-      <HeaderStyle>
-        <Row>
-          <Col>
-            <div>
-              <img src={logo} alt="" width={35}/>
-            </div>
-          </Col>
-          <Col>
-            <div style={{ position: "relative", left: "80px" }}>
-              <Burger open={open} setOpen={setOpen} />
-            </div>
-          </Col>
-        </Row>
-      </HeaderStyle>
-      <Menu open={open} setOpen={setOpen} />
-    </div>
+    <HeaderStyle>
+      <Navbar color="white" light expand="sm" fixed="top">
+        <NavbarBrand href="/">
+          <img src={logo} alt="logo" />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto text-center" navbar>
+            <NavItem>
+              <NavLink href="/formulaire">Signaler</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/recherche">Recherche</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/listes-plaintes">Liste plaintes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/carthographie">Carthographie</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/connexion">Connexion</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </HeaderStyle>
   );
 }
 

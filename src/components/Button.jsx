@@ -15,17 +15,25 @@ const ButtonStyle = styled.button`
     height: 50px;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
   }
 `;
 
-function Button({ namebutton, backgroundbutton, color }) {
+const Link = styled.a`
+  text-decoration: none;
+  color: white;
+`;
+
+function Button({ namebutton, backgroundbutton, color, lien }) {
   return (
     <div>
-      <ButtonStyle
-        style={{ background: `${backgroundbutton}`, color: `${color}` }}
-      >
-        {namebutton}
-      </ButtonStyle>
+      <Link href={lien}>
+        <ButtonStyle
+          style={{ background: `${backgroundbutton}`, color: `${color}` }}
+        >
+          {namebutton}
+        </ButtonStyle>
+      </Link>
     </div>
   );
 }

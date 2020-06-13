@@ -1,11 +1,11 @@
 import React from "react";
 
+import Wrapper from "./Wrapper";
 import { Jumbotron as Jumbo, Container } from "reactstrap";
 import styled from "styled-components";
 
 import image from "../images/homepage.jpg";
 
-import Header from "./Header";
 import Button from "./Button";
 
 const HomeStyle = styled.div`
@@ -17,16 +17,6 @@ const HomeStyle = styled.div`
     z-index: -2;
   }
 
-  .overlay {
-    background-color: #000;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    left: O;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
   .main {
     position: relative;
     top: 100px;
@@ -42,30 +32,32 @@ const HomeStyle = styled.div`
 function Home() {
   return (
     <HomeStyle>
-      <Header />
-      <Jumbo fluid className="jumbotron">
-        <div className="overlay"></div>
-        <Container>
-          <div className="main">
-            <h2 className="text-center">
-              Notre but et de faire entendre vos voix
-            </h2>
-            <Button
-              className="button"
-              namebutton="signaler un probleme"
-              backgroundbutton="#c80000"
-              color="white"
-            />{" "}
-            <br />
-            <Button
-              className="button"
-              namebutton="voire les signalements"
-              backgroundbutton="white"
-              color="#c80000"
-            />
-          </div>
-        </Container>
-      </Jumbo>
+      <Wrapper>
+        <Jumbo fluid className="jumbotron">
+          <Container>
+            <div className="main">
+              <h2 className="text-center">
+                Notre but et de faire entendre vos voix
+              </h2>
+              <div>
+                <Button
+                  namebutton="signaler un probleme"
+                  backgroundbutton="#c80000"
+                  color="white"
+                  lien="/formulaire"
+                />{" "}
+                <br />
+                <Button
+                  namebutton="voire les signalements"
+                  backgroundbutton="white"
+                  color="#c80000"
+                  lien="/listes-plaintes"
+                />
+              </div>
+            </div>
+          </Container>
+        </Jumbo>
+      </Wrapper>
     </HomeStyle>
   );
 }
