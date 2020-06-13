@@ -75,7 +75,7 @@ function Card({ match }) {
           <strong>Categorie : </strong> {items.categorie}
         </div>
         <div>
-          <h5>description</h5>
+          <h5>Description</h5>
           <Text>{items.description}</Text>
         </div>
       </Container>

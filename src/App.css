@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -10,4 +11,12 @@ body {
   box-sizing: border-box;
   background-color: #f1f1f1 !important;
   overflow-x: hidden;
+  font-family: Open Sans !important;
+}
+p{
+  font-family: Open Sans !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Comfortaa;
 }

@@ -19,6 +19,7 @@ const Connexion = () => {
    return ( 
         <>
             <Header /> 
+            <br/> <br/> <br/>
             <DivStyle>
                 <Container>
                     <h1>Connexion</h1>
@@ -28,7 +29,7 @@ const Connexion = () => {
                         <Button backgroundbutton="red" color ="white"   namebutton="Se connecter" />
                     </Form>
                     <LinkStyle>
-                        <p>Mot de passe oublié?</p> 
+                        <a href="/signup">S'inscrire</a> 
                     </LinkStyle>
 
                 </Container>

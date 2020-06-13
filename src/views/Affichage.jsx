@@ -65,7 +65,7 @@ const Affichage = () => {
             ))}
           </div>
           <div className="lienSignalements">
-            <a href="Signalements">Voir tous les signalements</a>
+            <a href="listes-plaintes">Voir tous les signalements</a>
           </div>
           <Container>
             <Button

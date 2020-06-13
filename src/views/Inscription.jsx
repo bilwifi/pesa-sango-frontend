@@ -44,9 +44,8 @@ const Inscription = () => {
           />
         </div>
         <br />
-        <br />
 
-        <p>Ou s'inscrire avec</p>
+        {/* <p>Ou s'inscrire avec</p>
 
         <div>
           <Grid columns="equal">
@@ -70,9 +69,9 @@ const Inscription = () => {
           </Grid>
         </div>
         <br />
-        <br />
-        <div>
-          <p>Vous avez déja un compte?</p>
+        <br /> */}
+        <div className="text-center">
+          <a href="/login">Vous avez déja un compte?</a>
         </div>
       </Container>
     </Wrapper>

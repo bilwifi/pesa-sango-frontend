@@ -27,6 +27,12 @@ const HomeStyle = styled.div`
       text-transform: uppercase;
     }
   }
+  .slogan{
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+  }
 `;
 
 function Home() {
@@ -36,15 +42,15 @@ function Home() {
         <Jumbo fluid className="jumbotron">
           <Container>
             <div className="main">
-              <h2 className="text-center">
-                Notre but et de faire entendre vos voix
+              <h2 className="text-center slogan">
+                Notre but et de faire entendre votre voix
               </h2>
               <div>
                 <Button
                   namebutton="signaler un probleme"
                   backgroundbutton="#c80000"
                   color="white"
-                  lien="/formulaire"
+                  lien="/plaintes"
                 />{" "}
                 <br />
                 <Button

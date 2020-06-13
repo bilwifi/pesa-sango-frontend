@@ -25,6 +25,13 @@ const HeaderStyle = styled.header`
     display: flex;
     justify-content: flex-end;
   }
+  .nav-link{
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+  }
   .collapse,
   .navbar-toggle {
     &:focus {
@@ -47,7 +54,10 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto text-center" navbar>
             <NavItem>
-              <NavLink href="/formulaire">Signaler</NavLink>
+              <NavLink href="/">Acceuil</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/plaintes">Signaler</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/recherche">Recherche</NavLink>
@@ -55,11 +65,14 @@ function Header() {
             <NavItem>
               <NavLink href="/listes-plaintes">Liste plaintes</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="/carthographie">Carthographie</NavLink>
+            </NavItem> */}
+            <NavItem>
+              <NavLink href="/login">Connexion</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/connexion">Connexion</NavLink>
+              <NavLink href="/signup">S'inscrire</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

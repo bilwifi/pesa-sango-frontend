@@ -16,6 +16,11 @@ const ButtonStyle = styled.button`
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    font-family: Comfortaa;
+font-style: normal;
+font-weight: bold;
+font-size: 13px;
+line-height: 14px;
   }
 `;
 
