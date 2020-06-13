@@ -4,9 +4,9 @@ import {
   Form,
   Container,
   Checkbox,
-  Grid,
-  Segment,
-  Icon,
+//   Grid,
+//   Segment,
+//   Icon,
 } from "semantic-ui-react";
 
 import Wrapper from "../components/Wrapper";

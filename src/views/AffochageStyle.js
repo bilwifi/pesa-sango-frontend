@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const AffichageStyle = styled.div`
-  main {
-    padding-top: 10px;
-  }
   .categories {
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +16,6 @@ export const AffichageStyle = styled.div`
     background-color: white;
   }
   .lienSignalements {
-    color: blueviolet;
     margin-left: 100px;
     margin-top: 20px;
 

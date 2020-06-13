@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink} from 'react-router-dom';
+import {NavLink } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
 import { AffichageStyle, Container } from "./AffochageStyle";
 import Categorie from "../components/Categorie";
@@ -41,17 +41,23 @@ const categories = [
 ];
 
 const Affichage = () => {
-  const [listeCategorie, setListeCategorie] = useState([]);
+     const [listeCategorie, setListeCategorie] = useState([]);
 
-  const refreshListeCategorie = (nom) => {
-    let liste = listeCategorie;
-    if (listeCategorie.includes(nom)) {
-      liste.push(nom);
-    } else {
-      liste.splice(nom);
+    const refreshListeCategorie = (nom) => {
+        let liste = [...listeCategorie];
+        if (!listeCategorie.includes(nom)) {
+            liste.push(nom);
+        } else {
+            liste = listeCategorie.filter((item) => item !== nom);
+        }
+        setListeCategorie(liste);
+        console.log(liste);
+    };
+
+    const handleFormSubmit = ()=>{
+        // les routes
     }
-    setListeCategorie(listeCategorie);
-  };
+
   return (
     <Wrapper>
       <AffichageStyle>
@@ -61,15 +67,21 @@ const Affichage = () => {
           </div>
           <div className="categories">
             {categories.map((categorie) => (
-              <Categorie nom={categorie.nom} />
+              <Categorie
+                key={categorie.id}
+                nom={categorie.nom}
+                refreshListeCategorie={refreshListeCategorie}
+                isActive={listeCategorie.includes(categorie.nom)}
+              />
             ))}
           </div>
+
           <div className="lienSignalements">
             <NavLink to="/listes-plaintes">Voir tous les signalements</NavLink>
           </div>
           <Container>
             <Button
-              // onClick={refreshListeCategorie}
+              onClick={handleFormSubmit}
               lien="/listes-plaintes"
               namebutton="Valider"
               backgroundbutton="red"
